@@ -1,0 +1,159 @@
+/* styles.css — with illustrated background image */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&family=Quicksand:wght@400;600&display=swap');
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: url('images/hand-drawn-abstract-and-geometric-shape-background-free-vector.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  margin: 0;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-size: 3rem;
+  text-shadow: 2px 2px #ffd6b0;
+  letter-spacing: 1px;
+  font-family: 'Baloo 2', cursive;
+  color: #444;
+  text-align: center;
+}
+
+h1::after, h2::after, h3::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 5px;
+  margin: 0.5rem auto 0.75rem;
+  background: linear-gradient(to right, #fcb69f, #ffecd2);
+  border-radius: 4px;
+}
+
+#categories, .bubble-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.color-bubble {
+  border: 2px dashed #ccc;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.95rem;
+  transition: transform 0.2s, box-shadow 0.3s;
+  cursor: grab;
+  background-color: #fdfdfd;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 2;
+}
+
+.color-bubble:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.palette-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 2rem;
+  min-height: 250px;
+  background: url('Images/ColorPalette.png') no-repeat center center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+}
+
+#unlock-status {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.category-block {
+  margin: 1rem auto;
+  padding: 0;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.category-block h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  border-bottom: 1px dashed #aaa;
+  display: inline-block;
+}
+
+.bubble-row {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.project-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  border: 2px dashed #ccc;
+  background-color: #eee;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+#demo-overlay {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 230, 0.96);
+  border: 2px dashed #ccc;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-family: 'Baloo 2', cursive;
+  z-index: 1000;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+
+#skip-demo {
+  margin-left: 2rem;
+  padding: 0.2rem 0.6rem;
+  border: 2px solid #aaa;
+  border-radius: 6px;
+  font-family: 'Quicksand', sans-serif;
+  background: #fff;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+#skip-demo:hover {
+  background: #fefae0;
+  color: #222;
+}

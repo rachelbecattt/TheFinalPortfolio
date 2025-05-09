@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading Responses Timeline</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: url('Images/background2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      margin: 0;
+      padding: 0 1rem;
+    }
+
+    .reading-container {
+      max-width: 800px;
+      margin: 3rem auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #4C9F70;
+    }
+    .timeline {
+      border-left: 3px solid #4C9F70;
+      margin: auto;
+      max-width: 700px;
+      position: relative;
+      padding-left: 1rem;
+    }
+    .week {
+      margin-bottom: 2rem;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+    }
+    .week::before {
+      content: '';
+      position: absolute;
+      left: -11px;
+      top: 0.6rem;
+      width: 18px;
+      height: 18px;
+      background: #4C9F70;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 3px #cde5dc;
+    }
+    .week-header {
+      cursor: pointer;
+      padding: 1rem 1.25rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.2s;
+    }
+    .week-header:hover {
+      background: #f0f7f3;
+    }
+    .week-content {
+      display: none;
+      background: #ffffff;
+      padding: 1.25rem 1.5rem;
+      border-left: 4px solid #4C9F70;
+      border-radius: 0 0 8px 8px;
+      margin-top: 0.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      animation: fadeIn 0.3s ease;
+    }
+    .week.open .week-content {
+      display: block;
+    }
+    .close-btn {
+      background: transparent;
+      border: none;
+      color: #4C9F70;
+      font-size: 0.9rem;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .close-btn:hover {
+      background: #e2f2ea;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>📖 Reading Responses</h1>
+  <div class="timeline">
+          <div class="week" id="week-2">
+            <div class="week-header" onclick="toggleWeek(2)">
+                Week 2
+                <button class="close-btn">Close</button>
+            </div>
+            <div class="week-content">
+                <h3>Mail Art and the Big Monster from Second Thoughts</h3>
+                <p>
+                In Ulises Carrión's critique of institutionalized art and his exploration of mail art, I found compelling parallels to other art movements and real-world examples.
+                Carrión's rejection of the “Big Monster” of institutions and his challenge to art as a commodity resonate strongly with Andy Warhol's <em>Campbell's Soup Cans</em>.
+                </p>
+                <p>
+                Carrión's ideas also bring to mind contemporary debates about the ethics of public art and its intersection with commerce. For instance, I've encountered stories of large advertisement billboards blocking homeowners' views, with billboard owners defending their actions by claiming the advertisements are works of art, akin to Warhol's soup cans.
+                While this argument attempts to frame billboards as culturally significant, the intent—profiting from public attention—and the imposition on individuals' living environments differentiate it from the collaborative and democratic ideals of mail art.
+                </p>
+                <h4>Questions</h4>
+                <ol>
+                <li>Should there be ethical guidelines for art in public spaces, particularly when it intersects with commercial or corporate interests?</li>
+                <li>Mail art aims to democratize art and make it accessible to everyone. In today's digital world, does social media achieve similar goals, or does it create new forms of “Big Monsters” in the form of algorithms and platforms?</li>
+                </ol>
+            </div>
+            </div>
+
+         <div class="week" id="week-3">
+            <div class="week-header" onclick="toggleWeek(3)">
+                Week 3
+                <button class="close-btn">Close</button>
+            </div>
+            <div class="week-content">
+                <h3>Selections from Creative Independent and Arena How Do You Use the Internet Mindfully</h3>
+                <p>
+                In our day-to-day lives, we often operate within rigid frameworks—schedules, tasks, social expectations—that parallel the polished, linear nature of mainstream social media or corporate-designed digital spaces. Schwulst's vision of websites as evolving gardens, rooms, or puddles invites us to embrace imperfection and change, not only online but also in how we live. </em>.
+                </p>
+                <p>
+                On the other hand, the article also highlights the transient nature of online platforms and how easily web history can be erased. Geocities pages were often abandoned, half-finished, or constantly "under construction." This impermanence was part of their charm—users didn't necessarily aim for longevity, but rather for expression in the moment. And Today's web content is similarly ephemeral. Social media posts, Stories, TikTok videos, and even entire platforms (like Vine) are designed to be temporary. This shifts the focus from polished permanence to transient creativity.
+                </p>
+                <h4>Questions</h4>
+                <ol>
+                <li>In terms of Technology and Digital Autonomy, how do we reclaim a sense of ownership over our digital spaces in a world dominated by corporate platforms? What are the trade-offs of building personal digital “gardens” versus relying on existing social media ecosystems?</li>
+                <li>How does the shift from personal websites to corporate-dominated platforms affect how we perceive our online identities?</li>
+                </ol>
+            </div>
+            </div>
+
+        <div class="week" id="week-4">
+            <div class="week-header" onclick="toggleWeek(4)">
+                Week 4
+                <button class="close-btn">Close</button>
+            </div>
+            <div class="week-content">
+                <h3>STILL THERE Ruins and Templates of Geocities from Lost and Living (in) Archives</h3>
+                <p>
+                Lialina highlights how Geocities provided users—many of whom were new to the internet—with a platform to create personal webpages freely. These were often their first encounters with web design and HTML, allowing them to explore and experiment without formal training. The lack of strict design guidelines meant that creativity was driven by individual interest and imagination rather than adherence to professional norms. However, the aesthetic of Geocities was often chaotic and visually cluttered. The article discusses how these elements, while considered "tacky" or "unprofessional" by modern standards, were significant because they represented a raw and unfiltered form of digital self-expression.</em>.
+                </p>
+                <p>
+                On the other hand, the article also highlights the transient nature of online platforms and how easily web history can be erased. Geocities pages were often abandoned, half-finished, or constantly "under construction." This impermanence was part of their charm—users didn't necessarily aim for longevity, but rather for expression in the moment. And Today's web content is similarly ephemeral. Social media posts, Stories, TikTok videos, and even entire platforms (like Vine) are designed to be temporary. This shifts the focus from polished permanence to transient creativity.
+                </p>
+                <h4>Questions</h4>
+                <ol>
+                <li>How can designers incorporate elements of spontaneity and "imperfection" in contemporary web design without making it feel outdated or cluttered?</li>
+                <li>How should designers approach the concept of "digital preservation" in an era where everything online is temporary?</li>
+                </ol>
+            </div>
+            </div>
+
+        <div class="week" id="week-5">
+            <div class="week-header" onclick="toggleWeek(5)">
+                Week 5
+                <button class="close-btn">Close</button>
+            </div>
+            <div class="week-content">
+                <h3>Alessandro Ludovico & Florian Cramer - Selections from Publishing from Post-Digital-Print</h3>
+                <p>
+                Ludovico argues that print is more than just a medium—that it is both the content and the display, shaping cultural habits in ways digital formats haven't yet replicated. We can interact with the physical prints through—texture, weight, smell, and the ritual of handling. Print publishing offers a degree of independence from the centralized control of digital platform, and the physicality of print resists constant surveillance and data tracking, it is a form of privacy and autonomy that digital media lacks.  </em>.
+                </p>
+                <h4>Questions</h4>
+                <ol>
+                <li>Can digital publishing ever fully replicate or replace the cultural and tactile role of print?</li>
+                <li>Print does not have to be opposed to digital; instead, hybrid models could evolve where digital tools enhance print. If print is more than just a medium—if it is an experience—what would it take for digital to reach the same level of sensory and cultural depth?</li>
+                </ol>
+            </div>
+            </div>
+
+        <div class="week" id="week-7">
+            <div class="week-header" onclick="toggleWeek(7)">
+                Week 7
+                <button class="close-btn">Close</button>
+            </div>
+            <div class="week-content">
+                <h3>Bojana Coklyat & Shannon Finnegan - Selections from Alt-Text as Poetry Workbook</h3>
+                <p>
+                This selected piece from the workbook emphasizes that alt-text is not an afterthought but an integral part of making visual work accessible, because the Alt-text is a written description of an image that allows blind and low-vision users to access visual content via screen readers. The author also suggests that artists and designers have a responsibility to make their work accessible. However, Alt-text is just one part of web accessibility; adding it does not make a website fully accessible. What is more, it  also acknowledges that many designers lack the resources or training to do so effectively.
+                </p>
+                <h4>Questions</h4>
+                <ol>
+                <li>How does accessibility impact different areas of design (UI/UX, architecture, product design)?</li>
+                <li>How much accessibility training do design students receive? Should it be a core part of the curriculum?</li>
+                </ol>
+            </div>
+            </div>
+
+        <div class="week" id="week-8">
+            <div class="week-header" onclick="toggleWeek(8)">
+                Week 8
+                <button class="close-btn">Close</button>
+            </div>
+            <div class="week-content">
+                <h3>A Personal Computer for Children of All Cultures" from Decolonising the Digital</h3>
+                <p>
+                The dominance of English in computing is not just a technical issue but a deeply ingrained cultural one. As UI/UX designers, we have the power to challenge these biases through intentional design choices. The question is: How can we create digital experiences that truly empower users from all linguistic and cultural backgrounds without forcing them to conform to Western computing norms? The digital world currently prioritizes English, but alternative ways of thinking about computing could lead to more inclusive systems. Nasser's attempt to create an Arabic-based programming language (Qalb) showed that programming relies too much on existing English-based systems, making it hard to escape linguistic dominance.
+                <h4>Questions</h4>
+                <ol>
+                <li>Should UI/UX designers assume users will be comfortable with some English, or should they aim for completely native-language experiences?</li>
+                <li>Could an entirely non-text-based digital interface exist? How would it function?</li>
+                </ol>
+            </div>
+            </div>
+
+        <div class="week" id="week-10">
+            <div class="week-header" onclick="toggleWeek(10)">
+                Week 10
+                <button class="close-btn">Close</button>
+            </div>
+            <div class="week-content">
+                <h3>David Reinfurt - Selections from A *New* Program for Graphic Design</h3>
+                <p>
+                TAs a designer, Reinfurt's discussion of Gestalt principles emphasizes how humans naturally perceive design elements as part of a whole rather than isolated objects. This has direct implications for graphic design, UI/UX design, and branding. Also the way we perceive elements as part of a larger whole (buttons grouped together, framing) is similar to how UI frameworks handle component-based design. It would be super helpful for us coding beginners to understand that CSS Grid and Flexbox layouts naturally align with Gestalt's laws of organization, especially in spacing and alignment, since these principles helps when designing intuitive UI layouts.
+                <h4>Questions</h4>
+                <ol>
+                <li>Can Gestalt principles help improve data visualization readability in libraries like D5.js?</li>
+                <li>The next one is more like a question in terms of design intention and coding examples: How can animations (e.g., hover effects) use the law of Common Fate to create a more intuitive experience?</li>
+                </ol>
+            </div>
+            </div>
+
+        <div class="week" id="week-12">
+            <div class="week-header" onclick="toggleWeek(12)">
+                Week 12
+                <button class="close-btn">Close</button>
+            </div>
+            <div class="week-content">
+                <h3>Dot Tuer - Beyond the New Media Frame The Poetics of Absence in Vera Frenkel's String Games</h3>
+                <p>
+                The "poetics of absence" reflects how digital technologies may connect us visually or virtually, but they can also obscure or erase physical presence, history, and emotion.the deeper value lies in its metaphorical evocation of loss and disconnected presence. On the other hand, the use of gestures, narrative fragments, and ephemeral exchanges created a poetic space where what’s missing becomes as important as what'ss shown.<h4>Questions</h4>
+                <ol>
+                <li>What Could "think archival, think ephemral" look Like in Modern Design? UI that subtly indicates the passage of time or layers memory over the present (like temporal bookmarks, fade effects, ghosted past comments?)</li>
+                <li>Can we reconsider the role of the Screen, that it becomes a site of both presence and disappearance? (Loss of time, partial present of memory...)</li>
+                </ol>
+            </div>
+            </div>
+
+        <div class="week" id="week-13">
+            <div class="week-header" onclick="toggleWeek(13)">
+                Week 13
+                <button class="close-btn">Close</button>
+            </div>
+            <div class="week-content">
+                <h3>Paul Soulellis - Performing the Feed</h3>
+                <p>
+                From the article we can see that we now live inside the stream, where meaning is less about the message and more about being part of a syntactic flow — guided by algorithms, interfaces, and ambient noise.
+                <ol>
+                <li>"Let's look for breaks, breaches, and leaks that resist the smooth flow." What would it look like to insert a pause, a glitch, or a deliberate moment of slowness?</li>
+                <li>Could I slow down the user intentionally — through a step that invites thought, a moment of ambiguity, or a pause? (Interruptive design might not feel smooth, but it makes space for agency. For worse, could be ads.)</li>
+                </ol>
+            </div>
+            </div>
+
+        <div class="week" id="week-14">
+            <div class="week-header" onclick="toggleWeek(14)">
+                Week 14
+                <button class="close-btn">Close</button>
+            </div>
+            <div class="week-content">
+                <h3>Neta Bomani & Sabii Borno - Beyond Dark Matter from Logic Issue 15 Beacons</h3>
+                <p>
+                "The Beyond" holds wisdom in feeling, memory, rhythm, and relationships, and from my understanding, this beyond is not a feature, but an invitation to reimagine from a different value system. To reflect on this story while designing, we must reckon with this by imagining and building from community, memory, and care, and constantly think that if our system define people , or do people define the system we design.<ol>
+                <li>What counts as "intelligence" or "efficiency" in the system we designed — and whose ways of knowing are excluded?</li>
+                <li>Gem rediscovers technology's potential through Ms. Johnson, Archie, and the kitchen — where tech serves relationships, not the other way around. What does the work look like when it’s accountable to a community, not just a market or client?</li>
+                </ol>
+            </div>
+            </div>
+
+        <div class="week" id="week-15">
+            <div class="week-header" onclick="toggleWeek(15)">
+                Week 15
+                <button class="close-btn">Close</button>
+            </div>
+            <div class="week-content">
+                <h3>Boris Groys - Art on the Internet</h3>
+                <p>
+                From before, art was only produced privately and exhibited publicly. However, the internet has dissolved the boundary between art's production and its presentation nowadays. From the article, we know that the process of production was exposed from beginning to end. The internet has become an archive that categorizes rather than liberates.<ol>
+                <li>Groys says the internet's true spectator is not a person — it's an algorithm. What does it mean to design something that resists legibility to algorithms?</li>
+                <li>According to Groys, the internet promises utopian preservation, but often betrays that by reimposing the same taxonomies artists tried to escape. How do we know if one's design work creates a future-facing archive - or just feeding a system that will flatten and repackage it?</li>
+                </ol>
+            </div>
+            </div>
+  </div>
+
+  <script>
+    function toggleWeek(num) {
+      const section = document.getElementById(`week-${num}`);
+      section.classList.toggle('open');
+    }
+    document.addEventListener('click', e => {
+      if (e.target.classList.contains('close-btn')) {
+        const week = e.target.closest('.week');
+        week.classList.remove('open');
+        e.stopPropagation();
+      }
+    });
+  </script>
+</body>
+<div class="back-button">
+    <a href="index.html">← Home</a>
+</html>
